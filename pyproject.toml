@@ -8,3 +8,14 @@ select = [
     "SIM",
     "I",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "perf: tests de performance (lents, exclus de make unit_test)",
+]
+
+[tool.coverage.run]
+source = ["triangulator"]
+branch = true
